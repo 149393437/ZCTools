@@ -7,8 +7,7 @@
 //
 
 #import "ZCTools.h"
-#import <LocalAuthentication/LocalAuthentication.h>
-#import <UIKit/UIKit.h>
+
 
 
 @implementation ZCTools
@@ -78,5 +77,38 @@
     
 
 }
+-(instancetype)initWithFaceDetectWithImageView:(UIImageView*)headerImageView Block:(void(^)(BOOL,NSArray*))b{
+    if (self=[super init]) {
+        
+        self.faceDetectBlock=b;
+        self.headerImageView=headerImageView;
+        [self createFaceDetect];
+    }
+    return self;
+}
+-(void)createFaceDetect{
+//识别
+//先缩减image
+    
+    
 
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

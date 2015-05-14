@@ -37,6 +37,8 @@
 
 
 #import <Foundation/Foundation.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+#import <UIKit/UIKit.h>
 typedef enum : NSUInteger {
     touchIDDeviceError=0,
     touchIDCheckSucceed,
@@ -44,7 +46,18 @@ typedef enum : NSUInteger {
     touchIDCheckPassWord
 } touchIDENUM;
 @interface ZCTools : NSObject
+//指纹block
 @property(nonatomic,copy)void(^touchIDBlock)(touchIDENUM);
-//IOS8  指纹验证
+//人脸识别block
+@property(nonatomic,copy)void(^faceDetectBlock)(BOOL,NSArray*);
+//人脸识别的imageView
+@property(nonatomic,assign)UIImageView*headerImageView;
+//iOS8  指纹验证
 -(instancetype)initWithTouchID_Block:(void(^)(touchIDENUM))a;
+//iOS7  图像识别
+-(instancetype)initWithFaceDetectWithImageView:(UIImageView*)headerImageView Block:(void(^)(BOOL,NSArray*))b;
+
+
+
+
 @end
