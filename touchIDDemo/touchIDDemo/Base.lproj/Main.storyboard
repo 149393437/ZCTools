@@ -25,11 +25,22 @@
                                     <action selector="touchIDClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFY-nN-nl9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmc-WI-mHH">
+                                <rect key="frame" x="47" y="92" width="60" height="30"/>
+                                <state key="normal" title="人脸识别">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fachDetect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GaZ-2n-6oJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Lpv-0u-G1A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="43" id="CfQ-lF-b4F"/>
                             <constraint firstItem="Lpv-0u-G1A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="f2C-r1-LLW"/>
+                            <constraint firstItem="Nmc-WI-mHH" firstAttribute="top" secondItem="Lpv-0u-G1A" secondAttribute="bottom" constant="26" id="itO-B6-Sp5"/>
+                            <constraint firstItem="Nmc-WI-mHH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="47" id="raD-wZ-wmZ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

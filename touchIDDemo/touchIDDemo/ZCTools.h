@@ -39,6 +39,8 @@
 #import <Foundation/Foundation.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 #import <UIKit/UIKit.h>
+#import <CoreImage/CoreImage.h>
+#import "ZCFaceDetectModel.h"
 typedef enum : NSUInteger {
     touchIDDeviceError=0,
     touchIDCheckSucceed,
